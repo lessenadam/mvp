@@ -10,7 +10,8 @@ angular.module('app', [])
           url: '/api/housing'
         })
         .then(function (result) {
-           return result.data;
+          console.log(result);
+          return result.data;
          }, function(err) {
             console.log('Error with data---: ', err);
          });

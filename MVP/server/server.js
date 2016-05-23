@@ -1,6 +1,7 @@
 // initialize server 
 var express = require('express');
 var app = express();
+var dataHelper = require('./middleware');
 
 
 
@@ -15,9 +16,7 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/../client/index.html');
 });
 
-app.get('/api/housing', function(req,res){
-  res.send("Thanks for requesting the /api/housing page");
-})
+app.get('/api/housing', dataHelper);
 
 
 

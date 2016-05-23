@@ -28,7 +28,7 @@ var housingSchema = new mongoose.Schema({
   },
 });
 
-var year = mongoose.model('housing', housingSchema);
+module.exports = mongoose.model('housing', housingSchema);
 
 // var someYear = new year ({
 //   year: 1988,
