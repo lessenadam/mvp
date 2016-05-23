@@ -4,7 +4,7 @@ var Housing = require('./db/database');
 var helper = function() {
   return Housing.find({}, function(err, data) {
     if (err) {
-      return cosole.log(err);
+      return console.log(err);
     }
     console.log('About to send the following data: ', data);
     return data;
