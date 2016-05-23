@@ -2,12 +2,17 @@
 var express = require('express');
 var app = express();
 
+console.log("DIRECTORY HERE IS------------: ",__dirname);
+// potentially __dirname + /client/index.html
+// app.use('/public', express.static(__dirname + '/client'));
+app.use(express.static(__dirname + '/../client'));
 
 // server logic
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.sendFile(__dirname + '/../client/index.html');
 });
+
 
 
 // server connection 
