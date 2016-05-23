@@ -1,0 +1,23 @@
+{
+  "name": "mvp",
+  "version": "1.0.0",
+  "description": "rentkrunch",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lessenadam/2016-04-mvp.git"
+  },
+  "author": "Adam Lessen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lessenadam/2016-04-mvp/issues"
+  },
+  "homepage": "https://github.com/lessenadam/2016-04-mvp#readme",
+  "dependencies": {
+    "mongodb": "^2.1.19",
+    "mongoose": "^4.4.19"
+  }
+}
