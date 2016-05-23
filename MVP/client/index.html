@@ -1,15 +1,19 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app='app'>
 <head>
   <meta charset="utf-8">
   <title>Rent Krunch</title>
   <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="app/housingController.js"></script>
 </head>
 <body>
 
-  <p>Nothing here {{'yet' + '!'}}</p>
+  <p>Something to be here {{'soon' + '!'}}</p>
+  <div ng-controller="HousingCtrl"> 
+    <span>{{data}}</span>
+  </div>
 
 </body>
 </html>
