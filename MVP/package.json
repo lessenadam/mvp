@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lessenadam/2016-04-mvp#readme",
   "dependencies": {
+    "express": "^4.13.4",
     "mongodb": "^2.1.19",
     "mongoose": "^4.4.19"
   }

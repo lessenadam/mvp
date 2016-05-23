@@ -1,41 +1,18 @@
-var mongoose = require('mongoose'); 
+// initialize server 
+var express = require('express');
+var app = express();
 
-mongoose.connect('mongodb://localhost/rentkrunch');
 
-var db = mongoose.connection;
+// server logic
 
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log("connected to the database!!!!!!!!!!!!!!!");
+app.get('/', function (req, res) {
+  res.send('Hello World!');
 });
 
-var housingSchema = new mongoose.Schema({
-  year: {
-    type: Number,
-    required: true,
-    unique: true
-  },
-  cpi: {
-    type: Number,
-    required: true
-  },
-  median_rent: {
-    type: Number,
-    required: true
-  },
+
+// server connection 
+
+app.listen(8080, function () {
+  console.log('rent krunch listening on port 8080!');
 });
 
-var year = mongoose.model('housing', housingSchema);
-
-var someYear = new year ({
-  year: 1988,
-  cpi: 1.4,
-  median_rent: 1700
-});
-
-someYear.save(function(err, year) {
-  if (err) {
-    return console.log(err);
-  }
-  console.log('Successfully saved the year!: ', year);
-});
