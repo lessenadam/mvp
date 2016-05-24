@@ -17,5 +17,8 @@ module.exports = function (req, res) {
   .then(function(data) {
     console.log('About to send the following data: ', data);
     res.json(data);
-  });
+  })
+  .catch(function(err) {
+    res.send('error 404')
+  });;
 };

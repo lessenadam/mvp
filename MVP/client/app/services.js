@@ -1,14 +1,13 @@
-// starting with my http call 
 
 
-angular.module('app', [])
+angular.module('app.services', [])
   .factory('dataService', function($http) {
    
   var getHousingData = function() {
       console.log("INSIDE THE FACTORY!!!!!")
       return $http({
         method: 'GET', 
-        url: url
+        url: '/api/housing'
       })
       .then(function (result) {
          return result.data;
